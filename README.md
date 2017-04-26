@@ -1,1 +1,3 @@
-# Rusty-mountain-climbers
+# Rusty Mountain Climbers
+
+A small game written in Rust
