@@ -39,6 +39,11 @@ fn main() {
                                                         }))
         .unwrap();
 
+    // these values should come from configuration
+    let mut window: PistonWindow =
+        WindowSettings::new("Mountain Climbers", [640, 480]).exit_on_esc(true).build().unwrap();
+
+
     let mut render = false;
     let mut last_time = PreciseTime::now();
     let mut accumulated_time = Duration::zero();
@@ -57,10 +62,8 @@ fn main() {
             render = false;
         }
     }
+
     /*
-    // these values should come from configuration
-    let mut window: PistonWindow =
-        WindowSettings::new("Mountain Climbers", [640, 480]).exit_on_esc(true).build().unwrap();
     while let Some(e) = window.next() {
         window.draw_2d(&e, |c, g| {
             clear([1.0; 4], g);
