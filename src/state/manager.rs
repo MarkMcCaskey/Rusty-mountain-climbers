@@ -1,12 +1,12 @@
 use state::*;
 
-struct StateManager {
+pub struct StateManager {
     states: Vec<States>,
 }
 
 impl StateManager {
     pub fn new() -> StateManager {
-        StateManager { states: vec![] }
+        StateManager { states: vec![States::Intro] }
     }
 
     pub fn push_state(&mut self, state: States) {
@@ -18,8 +18,6 @@ impl StateManager {
     }
 
     pub fn handle_events(&mut self) {
-        use std::ops::Index;
-
         if self.states.is_empty() {
             () //do nothing
         } else {

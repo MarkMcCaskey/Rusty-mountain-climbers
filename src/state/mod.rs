@@ -11,7 +11,7 @@ trait State {
     fn draw(&mut self);
 }
 
-enum States {
+pub enum States {
     Intro,
     Outro,
     Generic,
