@@ -14,5 +14,10 @@ pub fn read_arguments<'input>() -> ArgMatches<'input> {
                  .long("trace")
                  .help("Runs with verbose log messages")
                  .takes_value(false))
+        .arg(Arg::with_name("debug")
+                 .short("d")
+                 .long("debug")
+                 .help("Runs the game in debug mode")
+                 .takes_value(false))
         .get_matches()
 }
