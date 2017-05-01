@@ -1,13 +1,14 @@
-use GameEvent::*;
+use event::*;
 
 pub struct EventManager {
 	events: Vec<GameEvents>,
-	it: i32;
+	it: i32,
 }
 
 impl EventManager {
 	pub fn new() -> EventManager {
 		EventManager { }
+		// construct the EventManager (eventually)
 	}
 
 	pub fn push_event(&mut self, game_event: GameEvent) {
