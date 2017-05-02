@@ -1,8 +1,8 @@
 pub enum GameEvent {
-	LevelStart,
-	PlayerDead { player_id: i8 },
-	EnemyKilled { enemy_id: i8 },
-	PlayerReachedTop,
+    LevelStart,
+    PlayerDead { player_id: i8 },
+    EnemyKilled { enemy_id: i8 },
+    PlayerReachedTop,
 }
 
 /*
